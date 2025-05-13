@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel and Tour Agency</title>
+    <link rel="stylesheet" href="./css travel.css">
+    <style>
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <header class="header-content">
+            <a href="#" class="logo">
+                <img src="./logo.logo.png" alt="logoImage" class="logo-icon" width="100">
+                   MUhammad Hazik Riyan  <br> Urban Compass Tour <br> L.L.C
+            </a>
+
+            <nav class="nav" id="navMenu">
+                <a href="#home" class="nav-links">Home</a>
+                <a href="#gallery" class="nav-links">Gallery</a>
+                <a href="#tours" class="nav-links">Tours</a>
+                <a href="#about" class="nav-links">About</a>
+            </nav>
+
+            <a href="#contact" class="contact-button">Contact Us</a>
+
+            <button class="menu-button" id="menuToggle">
+                <img src="https://img.icons8.com/ios-filled/50/000000/menu--v1.png" alt="menu" class="menu-icon">
+            </button>
+        </header>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="main-section" id="home">
+        <div class="content-left">
+            <p class="section-label">Discover the World with Us</p>
+            <h1 class="section-title">Your Journey Begins Here</h1>
+            <p class="section-description">
+                Explore breathtaking destinations and unforgettable experiences with our expert travel guidance. Whether you're seeking adventure, relaxation, or cultural discovery, we make planning your perfect trip simple and stress-free.
+            </p>
+            <div class="button-group">
+                <a href="#start">Start Tour</a>
+                <a href="#tours">Take Tour</a>
+            </div>
+        </div>
+        <div class="content-right">
+            <img src="./GqRKuOEW0AAPzDv.jpg" alt="sectionImage" class="section-image">
+        </div>
+    </section>
+
+    <!-- Optional: More sections like Gallery, About, Contact... -->
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+    </script>
+
+    <section class="image-gallery">
+    <h2 class="gallery-title">Owner of Travel and tour</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item animate">
+            <img src="./w.jpg" alt="Paris">
+        </div>
+        <div class="gallery-item animate">
+            <img src="./h.jpg" alt="Maldives">
+        </div>
+        <div class="gallery-item animate">
+            <img src="./Ha.jpg" alt="Tokyo">
+        </div>
+    </div>
+</section>
+
+    <script>
+    // Scroll animation for .animate elements
+    const animatedItems = document.querySelectorAll('.gallery-item');
+
+    const showOnScroll = () => {
+        animatedItems.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                item.classList.add('visible');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', showOnScroll);
+    window.addEventListener('load', showOnScroll);
+</script>
+
+
+ 
+    <footer class="site-footer">
+    <div class="footer-container">
+        <!-- About -->
+        <div class="footer-column">
+            <h2 class="footer-logo">Travel & Tour</h2>
+            <p class="footer-description">
+                Explore the world with expert-guided tours and personalized travel experiences. Your adventure starts here.
+            </p>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tours">Tours</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Contact Us</h3>
+            <p>Email:urbancompasstour@gmail.com</p>
+            <p>Phone: +971 564897862</p>
+            <p>Address: Building no 11 office no 14 persia cluster al qasis city dubai UAE</p>
+            <p>office timing: Monday to friday open <br>saturday to sunday close
+            </p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-social">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <p class="footer-copy">&copy; 2025 Travel & Tour. All rights reserved.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>
